@@ -1,0 +1,277 @@
+/*
+* Reset
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+* General
+*/
+
+body {
+    background-color: aliceblue;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem 1rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.col-50 {
+    flex-basis: 50%;
+    padding: 0 1.5rem;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+h1 {
+    font-size: 2.5rem;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 10rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+/*
+* Header
+*/
+
+header {
+    display: flex;
+    align-items: center;
+    font-family: 'Neucha', 'Arial', cursive;
+    background: linear-gradient(#0c8aff, #085faf);
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.2);
+    padding: 0 1.2rem;
+    color: white;
+    height: 10%;
+    z-index: 2;
+}
+
+#logo {
+    height: 80%;
+    margin-right: 1rem;
+}
+
+/*
+* Main
+*/
+
+main {
+    background-color: white;
+    font-family: 'Roboto Mono', 'Arial', monospace;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 88%;
+    z-index: 1;
+}
+
+.btn {
+    font-size: 1rem;
+    background-color: #226fbe;
+    border: none;
+    color: #fff;
+    box-shadow: 0 6px #184d81;
+    border-radius: 40px;
+    padding: 1rem;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-round {
+    border-radius: 50%;
+}
+
+.btn:hover {
+    box-shadow: 0 4px #184d81;
+    top: 2px;
+}
+
+.btn:active {
+    box-shadow: none;
+    top: 6px;
+}
+
+.button-field {
+    margin-bottom: 3rem;
+}
+
+.button-field button{
+    background-size: 4.375rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 6.25rem;
+    width: 6.25rem;
+    margin-right: 2rem;
+}
+
+.button-field button:last-of-type {
+    margin-right: 0;
+}
+
+#start-game {
+    font-size: 1.5rem;
+    margin: 15px 30px;
+}
+
+#rock {
+    background-image: url(/img/rock-icon.png);
+}
+
+#paper {
+    background-image: url(/img/paper-icon.png);
+}
+
+#scissors {
+    background-image: url(/img/scissors-icon.png);
+}
+
+.player-log {
+    text-align: right;
+    border-right: 2px solid rgba(128, 128, 128, 0.5);
+}
+
+.computer-log {
+    text-align: left;
+}
+
+#announcer{
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #d3eaff
+}
+
+/*
+* Media queries 
+*/
+
+@media screen and (max-width: 39.9375rem) {
+    html {
+        font-size: 70%;
+    }
+
+    body {
+        background-color: white
+    }
+
+    main {
+        box-shadow: none;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    header {
+        border-radius: 0;
+    }
+
+    h3 {
+        font-size: 15rem
+    }
+}
+
+@media screen and (min-width: 40rem) {
+    .container {
+        max-width: 1140px;
+        padding: 10px 15px 0;
+    }
+}
+@media screen and (min-width: 64rem) {
+
+}
