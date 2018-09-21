@@ -209,15 +209,15 @@ main {
 }
 
 #rock {
-    background-image: url(/img/rock-icon.png);
+    background-image: url(../img/rock-icon.png);
 }
 
 #paper {
-    background-image: url(/img/paper-icon.png);
+    background-image: url(../img/paper-icon.png);
 }
 
 #scissors {
-    background-image: url(/img/scissors-icon.png);
+    background-image: url(../img/scissors-icon.png);
 }
 
 .player-log {
